@@ -100,7 +100,7 @@ You can use the following accounts to test the different roles in the system:
 | Role | Username | Password |
 | :--- | :--- | :--- |
 | **Patient** | `Test` | `a01234` |
-| **Doctor** | `Doctor` | `a01234` |
+| **Doctor** | `Doctor1` | `a01234` |
 | **Admin** | `Admin` | `a01234` |
 
 ---

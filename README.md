@@ -21,26 +21,26 @@ The entry point for all users. We use a hybrid approach where the landing page a
 
 | Main Landing Page | Secure Login |
 |:---:|:---:|
-| [cite_start]![Landing Page](SmartHospitalSystem/screenshots/main-page.png) [cite: 5] | [cite_start]![Login Screen](SmartHospitalSystem/screenshots/login.png) [cite: 9] |
+| [cite_start]![Landing Page](screenshots/main-page.png) [cite: 5] | [cite_start]![Login Screen](screenshots/login.png) [cite: 9] |
 
 ### 2. Patient Dashboard & Booking
 Patients can browse departments, select specialists, and book appointments instantly.
 
 | Patient Dashboard | Booking Interface |
 |:---:|:---:|
-| [cite_start]![Patient Dashboard](SmartHospitalSystem/screenshots/patient-booking.png) [cite: 10] | [cite_start]![Medical History](SmartHospitalSystem/screenshots/patient-history.png) [cite: 7] |
+| [cite_start]![Patient Dashboard](screenshots/patient-booking.png) [cite: 10] | [cite_start]![Medical History](screenshots/patient-history.png) [cite: 7] |
 
 ### 3. Doctor Dashboard
 Doctors can view their daily schedule, accept/reject appointments, and write digital prescriptions.
 
 | Doctor Dashboard | Prescription System |
 |:---:|:---:|
-| [cite_start]![Doctor Dashboard](SmartHospitalSystem/screenshots/doctor-dashboard.png) [cite: 11] | [cite_start]![Prescription Modal](SmartHospitalSystem/screenshots/doctor-prescription.png) [cite: 8] |
+| [cite_start]![Doctor Dashboard](screenshots/doctor-dashboard.png) [cite: 11] | [cite_start]![Prescription Modal](screenshots/doctor-prescription.png) [cite: 8] |
 
 ### 4. Admin Control Panel
 Admins have full control over user management, allowing them to create, edit, or delete doctor and patient accounts.
 
-[cite_start]![Admin Dashboard](SmartHospitalSystem/screenshots/admin-dashboard.png) [cite: 6]
+[cite_start]![Admin Dashboard](screenshots/admin-dashboard.png) [cite: 6]
 
 ---
 

@@ -21,26 +21,26 @@ The entry point for all users. We use a hybrid approach where the landing page a
 
 | Main Landing Page | Secure Login |
 |:---:|:---:|
-| [Landing Page](screenshots/main-page.png) | [Login Screen](screenshots/login.png) |
+| ![Landing Page](screenshots/main-page.png) | ![Login Screen](screenshots/login.png) |
 
 ### 2. Patient Dashboard & Booking
 Patients can browse departments, select specialists, and book appointments instantly.
 
 | Patient Dashboard | Booking Interface |
 |:---:|:---:|
-| [Patient Dashboard](screenshots/patient-booking.png) | [Medical History](screenshots/patient-history.png) |
+| ![Patient Dashboard](screenshots/patient-booking.png) | ![Medical History](screenshots/patient-history.png) |
 
 ### 3. Doctor Dashboard
 Doctors can view their daily schedule, accept/reject appointments, and write digital prescriptions.
 
 | Doctor Dashboard | Prescription System |
 |:---:|:---:|
-| [Doctor Dashboard](screenshots/doctor-dashboard.png) | [Prescription Modal](screenshots/doctor-prescription.png) |
+| ![Doctor Dashboard](screenshots/doctor-dashboard.png) | ![Prescription Modal](screenshots/doctor-prescription.png) |
 
 ### 4. Admin Control Panel
 Admins have full control over user management, allowing them to create, edit, or delete doctor and patient accounts.
 
-[Admin Dashboard](screenshots/admin-dashboard.png)
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ---
 

@@ -38,3 +38,10 @@ frontend/build/
 frontend/.env
 frontend/.env.development
 frontend/.env.production
+### Secrets ###
+.env
+*.p12
+*.jks
+
+### OS ###
+.DS_Store

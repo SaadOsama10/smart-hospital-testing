@@ -21,26 +21,26 @@ The entry point for all users. We use a hybrid approach where the landing page a
 
 | Main Landing Page | Secure Login |
 |:---:|:---:|
-| [cite_start]![Landing Page](screenshots/main-page.png) [cite: 5] | [cite_start]![Login Screen](screenshots/login.png) [cite: 9] |
+| ![Landing Page](screenshots/main-page.png) | ![Login Screen](screenshots/login.png) |
 
 ### 2. Patient Dashboard & Booking
 Patients can browse departments, select specialists, and book appointments instantly.
 
 | Patient Dashboard | Booking Interface |
 |:---:|:---:|
-| [cite_start]![Patient Dashboard](screenshots/patient-booking.png) [cite: 10] | [cite_start]![Medical History](screenshots/patient-history.png) [cite: 7] |
+| ![Patient Dashboard](screenshots/patient-booking.png) | ![Medical History](screenshots/patient-history.png) |
 
 ### 3. Doctor Dashboard
 Doctors can view their daily schedule, accept/reject appointments, and write digital prescriptions.
 
 | Doctor Dashboard | Prescription System |
 |:---:|:---:|
-| [cite_start]![Doctor Dashboard](screenshots/doctor-dashboard.png) [cite: 11] | [cite_start]![Prescription Modal](screenshots/doctor-prescription.png) [cite: 8] |
+| ![Doctor Dashboard](screenshots/doctor-dashboard.png) | ![Prescription Modal](screenshots/doctor-prescription.png) |
 
 ### 4. Admin Control Panel
 Admins have full control over user management, allowing them to create, edit, or delete doctor and patient accounts.
 
-[cite_start]![Admin Dashboard](screenshots/admin-dashboard.png) [cite: 6]
+![Admin Dashboard](screenshots/admin-dashboard.png)
 
 ---
 
@@ -90,18 +90,6 @@ This project is deployed on an **AWS EC2 Ubuntu instance**.
 * **Backend:** Runs as a background service using a custom `systemd` unit file, ensuring 99.9% uptime.
 * **Frontend:** Served via `serve` and managed by **PM2** to handle load balancing and crash recovery.
 * **Network:** AWS Security Groups configured to allow traffic on ports `8080` (API) and `3000` (Client).
-
----
-
-## 🧪 Testing Credentials
-
-You can use the following accounts to test the different roles in the system:
-
-| Role | Username | Password |
-| :--- | :--- | :--- |
-| **Patient** | `Test` | `a01234` |
-| **Doctor** | `Doctor1` | `a01234` |
-| **Admin** | `Admin` | `a01234` |
 
 ---
 

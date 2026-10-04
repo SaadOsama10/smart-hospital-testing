@@ -76,11 +76,15 @@ const Dashboard = () => {
         // Combine Date and Time into ISO format (YYYY-MM-DDTHH:MM:SS)
         const appointmentDateTime = `${bookingDate}T${bookingTime}:00`;
 
-        api.post('/appointments', {
+        // 1. Changed URL to match Spring Boot mapping ("/appointments/book")
+        api.post('/appointments/book', {
             doctorId: bookingDoctor.id,
-            patientId: user.id, // Assuming user object has id
-            appointmentTime: appointmentDateTime,
-            status: 'PENDING'
+            // 2. Changed property name from "appointmentTime" to "dateTime" to match Java DTO
+            dateTime: appointmentDateTime
+
+            // Note: I removed patientId and status because your Spring Boot controller
+            // safely handles the patient via the Authentication token and should
+            // set the status to PENDING by default in the service layer!
         })
             .then(() => {
                 setBookingMessage({ type: 'success', text: 'Appointment booked successfully!' });

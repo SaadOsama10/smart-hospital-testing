@@ -31,18 +31,22 @@ public class AdminController {
 
     // 1. Create Patient with CHECKS
     @PostMapping("/patients")
-    public ResponseEntity<?> createPatient(@Valid @RequestBody User user) {
+    public ResponseEntity<?> createPatient(@RequestBody UserRequest request) {
         // A. Uniqueness Check
-        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
+        if (userRepository.findByUsername(request.getUsername()).isPresent()) {
             return ResponseEntity.badRequest().body("{\"error\": \"Username is already taken!\"}");
         }
 
-        // B. Password Strength Check
-        if (!user.getPassword().matches(PASS_REGEX)) {
+        // B. Password Strength Check (Added null check to prevent NPE)
+        if (request.getPassword() == null || !request.getPassword().matches(PASS_REGEX)) {
             return ResponseEntity.badRequest().body("{\"error\": \"Weak Password: Needs 8+ chars, 1 Upper, 1 Number, 1 Special (!@#$%).\"}");
         }
 
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        // Create new User entity and map the data manually
+        User user = new User();
+        user.setFullName(request.getFullName());
+        user.setUsername(request.getUsername());
+        user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setRole(User.Role.PATIENT);
         User savedUser = userRepository.save(user);
 
@@ -51,7 +55,7 @@ public class AdminController {
 
     // 2. Update User with CHECKS
     @PutMapping("/users/{id}")
-    public ResponseEntity<?> updateUser(@PathVariable Long id, @Valid @RequestBody User details) {
+    public ResponseEntity<?> updateUser(@PathVariable Long id, @RequestBody UserRequest details) {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
@@ -170,4 +174,10 @@ public class AdminController {
         departmentRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
+}
+@lombok.Data
+class UserRequest {
+    private String fullName;
+    private String username;
+    private String password;
 }
